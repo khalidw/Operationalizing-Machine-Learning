@@ -2,7 +2,11 @@
 
 This is second of the three projects required for fulfillment of the Nanodegree Machine Learning Engineer with Microsoft Azure from Udacity. In this project, we create, publish and consume a Pipeline
 
-Data for this project: https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+The data used in this project is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y). It consists of 20 input variables (columns) and 32,950 rows with 3,692 positive classes and 29,258 negative classes.
+
+The data used in this project can be found [here:](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv)
+
+Detailed description of the dataset can be found [here:](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
 
 ## Architectural Diagram
 *TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
@@ -37,14 +41,19 @@ Data for this project: https://automlsamplenotebookdata.blob.core.windows.net/au
 1. Logs
 
 ![Logs](images/logs.png)
+
 ![Logs_1](images/logs_1.png)
+
 ![logs_2](images/logs_2.png)
 
 1. Swagger
 
 ![Swagger](images/swagger.png)
+
 ![Swagger_1](images/swagger_1.png)
+
 ![Swagger_2](images/swagger_2.png)
+
 ![Swagger_3](images/swagger_3.png)
 
 1. Model Consumption
@@ -54,6 +63,7 @@ Data for this project: https://automlsamplenotebookdata.blob.core.windows.net/au
 1. Benchmarking
 
 ![Bechmarking](images/benchmarking.png)
+
 ![Benchmarking](images/benchmarking_1.png)
 
 1. Pipeline
