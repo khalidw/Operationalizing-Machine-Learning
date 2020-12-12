@@ -20,31 +20,31 @@ Before begining with our experiment, we have to register the dataset (Step 01) a
 
 ## Key Steps
 
-1. Once we have registered the dataset, it appears in the Datasets tab of the Azure ML Studio
+Once we have registered the dataset, it appears in the Datasets tab of the Azure ML Studio
 
 ![Registered Dataset](images/registeredDataset.png)
 
-1. The Automated ML experiment took around 30 minutes to execute. Once completed, the status is changed from running to completed.
+The Automated ML experiment took around 30 minutes to execute. Once completed, the status is changed from running to completed.
 
 ![Completed Experiment](images/completedExperiment.png)
 
-1. Voting Ensemble was the best model with the accuracy of ``0.9164``. 
+Voting Ensemble was found to be the best model with an accuracy of ``0.9164``. 
 
 ![Best Model](images/bestModel.png)
 
-1. Best Model Metrics
+The image below shows the rest of metrices for the Best Model (Voting Ensemble)
 
 ![Best Model Metrics](images/bestModelStats.png)
 
-1. Disabled Application Insights
+We did not enable application insights at model deployment, hence a status of ``False`` is shown
 
 ![Disabled Application Insights](images/appInsightsDisabled.png)
 
-1. Enabled Application Insights
+After we enable application insights using ``logs.py``, status is set to ``True`` and a URL is also displayed to access insights for the deployed model (Voting Ensemble)
 
 ![Enabled Application Insights](images/appInsightsEnabled.png)
 
-1. Logs
+Screenshots below shows output of ``logs.py``
 
 ![Logs](images/logs.png)
 
@@ -52,7 +52,7 @@ Before begining with our experiment, we have to register the dataset (Step 01) a
 
 ![logs_2](images/logs_2.png)
 
-1. Swagger
+Swagger is used, 
 
 ![Swagger](images/swagger.png)
 
@@ -62,11 +62,11 @@ Before begining with our experiment, we have to register the dataset (Step 01) a
 
 ![Swagger_3](images/swagger_3.png)
 
-1. Model Consumption
+We use ``endpoint.py`` to consume the deployed model; A JSON document is passed on to the HTTP REST API endpoint of the deployed model using ``POST`` method, the model processes it and passes the results back as JSON document.
 
 ![Model Consumption](images/endpoint.png)
 
-1. Benchmarking
+Apache Benchmarking is used to benchmark the deployed model (HTTP REST API endpoint). A number of requests are send to the deployed model and they are timed to find out metrics such as  failed requests, time per requests etc.
 
 ![Bechmarking](images/benchmarking.png)
 
