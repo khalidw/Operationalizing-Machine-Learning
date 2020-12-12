@@ -19,17 +19,16 @@ The architectural diagram is quite elaborative, however, a brief description of 
 Before begining with our experiment, we have to register the dataset (Step 01) and configure a compute cluster (Step 02) that will be used for training. Automated ML experiment is used to find the best classification model (Steps 03,04,05). The best model is then deployed using Azure Container Instances while keeping authentication enabled (Steps 06,07). We enable application insights for our deployed model using script ``logs.py`` (Step 08). To interact with the deployed model documentation, we use swagger (Step 09). Model is then consumed using ``endpoint.py`` (Step 10). An optional benchmarking is done for the deployed model using Apache benchmarking (Step 11), ``benchmark.sh`` is used here.
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps.
 
-1. Registered Dataset
+1. Once we have registered the dataset, it appears in the Datasets tab of the Azure ML Studio
 
 ![Registered Dataset](images/registeredDataset.png)
 
-1. Completed Experiment
+1. The Automated ML experiment took around 30 minutes to execute. Once completed, the status is changed from running to completed.
 
 ![Completed Experiment](images/completedExperiment.png)
 
-1. Best Model
+1. Voting Ensemble was the best model with the accuracy of ``0.9164``. 
 
 ![Best Model](images/bestModel.png)
 
