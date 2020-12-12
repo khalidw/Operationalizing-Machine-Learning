@@ -28,11 +28,11 @@ The Automated ML experiment took around 30 minutes to execute. Once completed, t
 
 ![Completed Experiment](images/completedExperiment.png)
 
-Voting Ensemble was found to be the best model with an accuracy of ``0.9164``. 
+Voting Ensemble was found to be the best model with an accuracy of ``0.91654``. 
 
 ![Best Model](images/bestModel.png)
 
-The image below shows the rest of metrices for the Best Model (Voting Ensemble)
+The image below shows few other metrics for the Best Model (Voting Ensemble)
 
 ![Best Model Metrics](images/bestModelStats.png)
 
@@ -44,7 +44,7 @@ After we enable application insights using ``logs.py``, status is set to ``True`
 
 ![Enabled Application Insights](images/appInsightsEnabled.png)
 
-Screenshots below shows output of ``logs.py``
+Screenshots below shows output of ``logs.py`` (Used in previous step to enable application insights)
 
 ![Logs](images/logs.png)
 
@@ -52,7 +52,7 @@ Screenshots below shows output of ``logs.py``
 
 ![logs_2](images/logs_2.png)
 
-Swagger is used, 
+Swagger is used to interact with the HTTP REST API endpoint documentation. ``swagger.sh`` is used to run a swagger docker image, ``serve.py`` serves the ``swagger.json`` for our model on an HTTP server. Screenshots below describe the input data and expected output from the deployed model.  
 
 ![Swagger](images/swagger.png)
 
@@ -72,27 +72,27 @@ Apache Benchmarking is used to benchmark the deployed model (HTTP REST API endpo
 
 ![Benchmarking](images/benchmarking_1.png)
 
-1. Pipeline
+Now we try to create a pipeline for the entire process. Use Jupyter Notebook ``aml-pipelines-with-automated-machine-learning-step.ipynb`` to create this pipeline.
 
 ![Pipeline](images/pipeline.png)
 
-1. Pipeline Endpoint
+Pipeline Endpoint is created for consumption
 
 ![Pipeline Endpoint](images/pipelineEndpoint.png)
 
-1. Bankmarketing dataset with AzureML module
+Pipeline Graph shows Bankmarketing dataset with AzureML module
 
 ![Bankmarketing dataset with AzureML module](images/bankMarketingDatasetWithAutoMLModule.png)
 
-1. Published Pipeline Overview
+After the pipeline is published, we can use Published Pipeline Overview to see the status and REST endpoint of the pipeline.
 
 ![Published Pipeline Overview](images/publishedPipelineOverview.png)
 
-1. Run Details Widget
+Run Details Widget in the Jupyter Notebook provides details such as run logs, duration, steps etc.
 
 ![Run Details Widget](images/runDetailsWidget.png)
 
-1. ML Studio Scheduled Run
+ML Studio Scheduled Run after completion.
 
 ![ML Studio Scheduled Run](images/mlStudioScheduledRun.png)
 
