@@ -97,7 +97,5 @@ ML Studio Scheduled Run after completion.
 ![ML Studio Scheduled Run](images/mlStudioScheduledRun.png)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+You can view the screencast for this project demonstrating some aspects at this ![link](https://youtu.be/F7GvbvJ7eaA)
