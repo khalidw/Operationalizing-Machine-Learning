@@ -98,4 +98,4 @@ ML Studio Scheduled Run after completion.
 
 ## Screen Recording
 
-You can view the screencast for this project demonstrating some aspects at this ![link](https://youtu.be/F7GvbvJ7eaA)
+You can view the screencast for this project demonstrating some aspects at this [link](https://youtu.be/F7GvbvJ7eaA)
