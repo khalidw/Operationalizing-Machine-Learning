@@ -16,7 +16,7 @@ The diagram below shows the overall architecture of the project.
 
 The architectural diagram is quite elaborative, however, a brief description of each step is as below:
 
-Before begining with our experiment, we have to register the dataset (Step 01) and configure a compute cluster (Step 02) that will be used for training. Automated ML experiment is used to find the best classification model (Steps 03,04,05). The best model is then deployed using Azure Container Instances while keeping authentication enabled (Steps 06,07). We enable application insights for our deployed model using script ``logs.py`` (Step 08). To interact with the deployed model documentation, we use swagger (Step 09). Model is then consumed using ``endpoint.py`` (Step 10). An optional benchmarking is done for the deployed model using Apache benchmarking (Step 11), ``benchmark.sh`` is used here.
+Before begining with our experiment, we have to register the dataset (Step 01) and configure a compute cluster (Step 02) that will be used for training. Automated ML experiment is used to find the best classification model (Steps 03,04,05). The best model is then deployed as an HTTP REST endpoint using Azure Container Instances while keeping authentication enabled (Steps 06,07). We enable application insights for our deployed model using script ``logs.py`` (Step 08). To interact with the deployed model documentation, we use swagger (Step 09). Model is then consumed using ``endpoint.py`` (Step 10). An optional benchmarking is done for the deployed model using Apache benchmarking (Step 11), ``benchmark.sh`` is used here.
 
 ## Key Steps
 
@@ -95,6 +95,14 @@ Run Details Widget in the Jupyter Notebook provides details such as run logs, du
 ML Studio Scheduled Run after completion.
 
 ![ML Studio Scheduled Run](images/mlStudioScheduledRun.png)
+
+## Improvement Suggestions
+
+The current accuracy is already very high ``0.91654``, however, for further improvement we can try following:
+
+1. Use Deep Learning; This may provide a better performance, however we would need to increase the dataset size as well as the computer cluster for faster training.
+1. Remove class imbalance in the exisiting data; The dataset used is highly imbalanced, hence our model maybe biased to one class.
+1. Increase AutoML run duration; This would allow testing of a lot more models.  
 
 ## Screen Recording
 
